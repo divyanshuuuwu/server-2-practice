@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="/stylesheets/style.css">
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+</head>
+<body>
+    
+    <div class="main w-full min-h-screen bg-zinc-900 p-10 text-white">
+
+        <a class="text-blue-500 inline-block mb-10" href="/">GO BACK TO HOME</a>
+        <div>
+            <form action="/delete/<%= filename %>" method="POST">
+    <button class="mt-2 bg-red-600 px-5 py-2 rounded-md">
+        Delete
+    </button>
+</form>
+        </div>
+    </div>

@@ -43,6 +43,21 @@ app.post("/create", (req, res)=>{
 })
 
 
+app.get("/delete/:filename", (req, res)=>{
+        res.render("delete" , {filename: req.params.filename})
+    })  
+
+app.post("/delete/:filename", (req, res) => {
+    fs.unlink(`./files/${req.params.filename}`, (err) => {
+        if (err) {
+            return res.status(500).send("Couldn't delete file");
+        }
+
+        res.redirect("/");
+    });
+});
+
+
 
 
 app.listen(PORT,()=>{
